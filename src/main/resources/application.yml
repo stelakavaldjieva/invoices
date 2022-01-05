@@ -1,0 +1,8 @@
+# using yml file instead of properties is a little bit more structured
+spring:
+  datasource:
+    # connection to remote Oracle database
+    url: "jdbc:oracle:thin:stela_kavaldzhieva/dbpass@83.228.124.173:6223/stela_kavaldzhieva"
+    driverClassName: "oracle.jdbc.OracleDriver"
+    username: "stela_kavaldzhieva"
+    password: "dbpass"

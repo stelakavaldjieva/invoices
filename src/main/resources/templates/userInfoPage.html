@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Info</title>
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="/_menu"></th:block>
+
+<h2 style="background: red; color: white">User Info Page</h2>
+<h3>Welcome : <span th:utext="${#request.userPrincipal.name}"></span></h3>
+<b>This is protected page!</b>
+
+<br/><br/>
+
+<div th:if="${userInfo != null}" th:utext="${userInfo}"></div>
+
+<br/><br/>
+
+<h2 style="background: red; color: white">List uploaded files</h2>
+<table>
+    <thead>
+    <tr>
+        <th> Type</th>
+        <th> File_Number</th>
+        <th> Amount</th>
+        <th> Currency</th>
+        <th> Recipient</th>
+        <th> ISSUER</th>
+        <th> FILE_DATE</th>
+        <th> PAYMENT_TERM</th>
+        <th> UPLOADED</th>
+        <th> VALID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td> CSV</td>
+        <td> 4</td>
+        <td> 400.00</td>
+        <td> BGN</td>
+        <td> First Investment Bank</td>
+        <td> Associate Generaly Express Bank</td>
+        <td> 2021.11.10 11:37:15</td>
+        <td> Pay on delivery</td>
+        <td> 2021.11.10 15:41:10</td>
+        <td><input type="checkbox"/></td>
+    </tr>
+    <tr>
+        <td> CSV</td>
+        <td> 16</td>
+        <td> 1573.20</td>
+        <td> USD</td>
+        <td> Unicredit Bulbank</td>
+        <td> Glavbolgarstroy Ltd.</td>
+        <td> 2021.11.10 14:23:52</td>
+        <td> Payment in advance</td>
+        <td> 2021.11.10 16:01:12</td>
+        <td><input type="checkbox" checked/></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>

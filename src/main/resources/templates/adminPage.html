@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:utext="${title}">Admin</title>
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="/_menu"></th:block>
+
+<h2 style="background: red; color: white">Admin Page</h2>
+<h3>Welcome :
+    <span th:utext="${#request.userPrincipal.name}"></span>
+</h3>
+<b>This is protected page!</b>
+
+<br/><br/>
+
+<div th:if="${userInfo != null}" th:utext="${userInfo}"></div>
+
+<br/><br/>
+
+<h2 style="background: red; color: white">List Users</h2>
+<table>
+    <thead>
+    <tr>
+        <th> Username</th>
+        <th> Email</th>
+        <th> Enabled</th>
+        <th> FILE_UPLOAD</th>
+        <th> FILE_UPLOAD_HISTORY</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--    <tr th:if="${users.empty}">-->
+    <!--        <td colspan="2"> No Users Available</td>-->
+    <!--    </tr>-->
+    <!--    <tr th:each="user : ${users}">-->
+    <!--        <td><span th:text="${user.username}"> Username </span></td>-->
+    <!--        <td><span th:text="${user.email}"> Email </span></td>-->
+    <!--    </tr>-->
+
+    <tr>
+        <td> a</td>
+        <td> a@a.gr</td>
+        <td><input type="checkbox" checked/></td>
+        <td><input type="checkbox" checked/></td>
+        <td><input type="checkbox" checked/></td>
+    </tr>
+    <tr>
+        <td> a1</td>
+        <td> a1@a.gr</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" checked/></td>
+        <td><input type="checkbox" checked/></td>
+    </tr>
+    <tr>
+        <td> u</td>
+        <td> u@u.gr</td>
+        <td><input type="checkbox" checked/></td>
+        <td><input type="checkbox" checked/></td>
+        <td><input type="checkbox" checked/></td>
+    </tr>
+    <tr>
+        <td> t</td>
+        <td> t@t.com</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>
